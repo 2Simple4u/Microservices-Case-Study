@@ -10,4 +10,5 @@ public interface EmployeeRepository extends MongoRepository<Employee, String> {
 
 	 public Employee findByEmpId(String empId);
 	public void deleteByEmpId(String eId);
+//	public void updateById(String eId);
 }

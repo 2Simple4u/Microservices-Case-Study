@@ -2,10 +2,12 @@ package com.lms.AddEmployeeService.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
 import com.lms.AddEmployeeService.model.Employee;
 import com.lms.AddEmployeeService.repository.EmployeeRepository;
 
@@ -21,8 +23,8 @@ public class EmployeeService {
 		return list;
 	}
 	
-	public Employee getBatches(String id) {
-		return employeeRepository.findByEmpId(id);
+	public Employee getEmployee(String eid) {
+		return employeeRepository.findByEmpId(eid);
 	}
 	
 	public Employee addEmployee(Employee employee) {
